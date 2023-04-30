@@ -1,5 +1,19 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=IBM+Plex+Sans:wght@200;300;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --bg-login: #f3f3f3;
+  --bg-login-card: #fff;
+  --bg-btn-login: #3f7de8;
+  --roxo-claro: #ac7dfd;
+  --verde-teal: #027da7;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
