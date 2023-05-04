@@ -26,7 +26,7 @@ const Login = () => {
           <div className="img-container">
             <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_uxobbjkj.json" background="transparent" speed="1" styles="width: 300px; height: 300px;" loop autoplay></lottie-player>
             <div className="lottie-text-container">
-              <p>Seja bem vindo, acesso nosso portal e encontre o profissional ideal para o que você precisa.</p>
+              <p>Seja bem-vindo, acesse nosso portal e encontre o profissional ideal para o que você precisa.</p>
             </div>
           </div>
         </div>
