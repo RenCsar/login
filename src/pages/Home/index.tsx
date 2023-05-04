@@ -9,7 +9,7 @@ const Home = () => {
       <Header />
       <div className="welcome-container">
         <div className="lottie-container">
-          <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_5s1rumi5.json"  background="transparent"  speed="1"  styles="width: 300px; height: 300px; color:#027da7"  loop  autoplay></lottie-player>
+          <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_5s1rumi5.json"  background="transparent"  speed="1"  styles="width: 300px; height: 300px; color:#027da7"  autoplay></lottie-player>
         </div>
       </div>
       <div className="text-container">

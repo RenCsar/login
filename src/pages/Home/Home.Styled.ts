@@ -6,7 +6,7 @@ export const Container = style.div`
         display: flex;
         justify-content: center;
         width: 100%;
-        margin-top: 50px;
+        margin-top: 40px;
 
         & .lottie-container{
             width: 500px;
@@ -38,7 +38,7 @@ export const Container = style.div`
 
 
         & .lottie-container{
-            width: 500px
+            width: 460px
         }
     }
 
