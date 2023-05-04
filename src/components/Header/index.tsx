@@ -51,14 +51,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const test = () =>{
+const test = () => {
   console.log('teste')
 }
 
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{background: '#027da7'}}>
+      <AppBar position="static" sx={{ background: '#027da7' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -77,8 +77,8 @@ export default function Header() {
           >
             TH - Talents Hunter
           </Typography>
-          <Search 
-          onKeyDown={(e: any)=> e.keyCode == 13? console.log(e.target.value): ""}
+          <Search
+            onKeyDown={(e: any) => e.keyCode == 13 ? console.log(e.target.value) : ""}
           >
             <SearchIconWrapper>
               <SearchIcon />

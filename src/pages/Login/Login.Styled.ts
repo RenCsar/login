@@ -21,7 +21,7 @@ export const Container = styled.div`
       width: 50%;
       display: flex;
       align-items: flex-start;
-      margin-top: 15px;  
+      margin-top: 15px;
 
       .lottie-text-container {
         width: 100%;
@@ -54,8 +54,8 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         width: 300px;
-        gap: 15px; 
-        
+        gap: 15px;
+
         .btn-container {
           margin-top: 10px;
         }

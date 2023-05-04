@@ -4,9 +4,9 @@ export type BtnTypes = {
     color?: string;
     width?: string;
     height?: string;
-}
+};
 
 export type IUser = {
     email: string;
     senha: string;
-}
+};
