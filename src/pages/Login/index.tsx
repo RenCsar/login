@@ -1,4 +1,3 @@
-import * as Lottieplayer from "@lottiefiles/lottie-player";
 import "@lottiefiles/lottie-player";
 import { Container } from "./Login.Styled";
 import Button from "../../components/Button/Button";
@@ -7,15 +6,18 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { schema } from "../../shared/schemas/schema";
 import { TextField } from "@mui/material";
 import { IUser } from "../../shared/types/types";
+import { login } from "../../store/usuário/authSlice";
+import { store } from "../../store/store";
 
 const Login = () => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IUser>({
     resolver: yupResolver(schema)
-  })
+  });
 
-  const logar = (data: any) => {
-    console.log(data);
+  const logar = (data: IUser) => {
+    // console.log(data);
+    store.dispatch(login(data.email, data.senha))
     reset()
   }
 

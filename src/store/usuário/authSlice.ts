@@ -40,6 +40,7 @@ export const login =
                 dispatch(loginSuccess(response.data));
             } catch (error: any) {
                 dispatch(loginFailure(error.message));
+                console.log("Erro")
             }
         };
 
