@@ -1,3 +1,8 @@
+import { SlideProps } from '@mui/material/Slide';
+
+
+export type TransitionProps = Omit<SlideProps, 'direction'>;
+
 export type BtnTypes = {
     value?: string;
     padding: string;

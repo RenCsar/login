@@ -7,7 +7,7 @@ const initialState: TAuthState = {
     user: null,
     error: null,
     token: null,
-    loading: false 
+    loading: false
 };
 
 const authSlice = createSlice({
@@ -19,10 +19,11 @@ const authSlice = createSlice({
             state.user = action.payload;
             state.error = null;
         },
-        loginFailure: (state, action: PayloadAction<string>) => {
+        loginFailure: (state, action: PayloadAction<string | null>) => {
             state.isAuthenticated = false;
             state.user = null;
             state.error = action.payload;
+            state.loading = false;
         },
         logout: (state) => {
             state.isAuthenticated = false;
@@ -36,7 +37,7 @@ const authSlice = createSlice({
             state.token = action.payload
             localStorage.setItem('token', action.payload)
         },
-        setLoading: (state, action: PayloadAction<boolean>)=>{
+        setLoading: (state, action: PayloadAction<boolean>) => {
             state.loading = action.payload
         }
     },
@@ -51,12 +52,11 @@ export const login =
                 dispatch(setLoading(true))
                 const response = await API.post<{ user: TUser, token: string }>('/auth/user', { email, password });
                 dispatch(loginSuccess(response.data.user));
-                dispatch(setToken(response.data.token))
+                dispatch(setToken(response.data.token));
 
                 redirectTo('/home');
             } catch (error: any) {
-                dispatch(loginFailure(error.message));
-                dispatch(setLoading(false))
+                dispatch(loginFailure(error.response.data.msg));
             }
         };
 
