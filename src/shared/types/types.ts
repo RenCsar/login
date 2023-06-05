@@ -22,4 +22,5 @@ export type TAuthState = {
     user: TUser | null;
     error: string | null;
     token: string | null;
+    loading: boolean
 };

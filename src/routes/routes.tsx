@@ -1,15 +1,13 @@
 import { BrowserRouter, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
-import { RootState, store } from "../store/store";
 import { Provider } from 'react-redux';
-import { useSelector } from "react-redux";
+import { store } from "../store/store";
 
 function Router() {
 
   const PrivateRoute = () => {
-    const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token');
 
     return token ? (
       <Outlet />

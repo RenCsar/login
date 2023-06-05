@@ -1,13 +1,13 @@
 import { createSlice, Dispatch, PayloadAction } from '@reduxjs/toolkit';
 import { TAuthState, TUser } from '../../shared/types/types';
 import API from '../api/api';
-import { useNavigate } from 'react-router-dom';
 
 const initialState: TAuthState = {
     isAuthenticated: false,
     user: null,
     error: null,
-    token: null
+    token: null,
+    loading: false 
 };
 
 const authSlice = createSlice({
@@ -29,21 +29,26 @@ const authSlice = createSlice({
             state.user = null;
             state.error = null;
             state.token = null;
+            state.loading = false;
             localStorage.removeItem('token');
         },
         setToken: (state, action: PayloadAction<string>) => {
             state.token = action.payload
             localStorage.setItem('token', action.payload)
+        },
+        setLoading: (state, action)=>{
+            state.loading = action.payload
         }
     },
 });
 
-export const { loginSuccess, loginFailure, logout, setToken } = authSlice.actions;
+export const { loginSuccess, loginFailure, logout, setToken, setLoading } = authSlice.actions;
 
 export const login =
     (email: string, password: string, redirectTo: (path: string) => void) =>
         async (dispatch: any) => {
             try {
+                dispatch(setLoading(true))
                 const response = await API.post<{ user: TUser, token: string }>('/auth/user', { email, password });
                 dispatch(loginSuccess(response.data.user));
                 dispatch(setToken(response.data.token))
@@ -51,7 +56,7 @@ export const login =
                 redirectTo('/home');
             } catch (error: any) {
                 dispatch(loginFailure(error.message));
-                console.log(error)
+                dispatch(setLoading(false))
             }
         };
 

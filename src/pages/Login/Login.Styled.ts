@@ -17,7 +17,7 @@ export const Container = styled.div`
     height: 100%;
     background-image: url(${Work});
     background-size: cover;
-    filter: blur(4px);
+    filter: blur(5px);
     z-index: -1;
   }
 
