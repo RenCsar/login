@@ -8,6 +8,7 @@ import { TextField } from "@mui/material";
 import { IUser } from "../../shared/types/types";
 import { login } from "../../store/usuário/authSlice";
 import { store } from "../../store/store";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -15,9 +16,14 @@ const Login = () => {
     resolver: yupResolver(schema)
   });
 
+  const navigate = useNavigate();
+
+  const redirectTo = (path: string) => {
+    navigate(path);
+  };
+
   const logar = (data: IUser) => {
-    // console.log(data);
-    store.dispatch(login(data.email, data.senha))
+    store.dispatch(login(data.email, data.password, redirectTo))
     reset()
   }
 
@@ -46,13 +52,13 @@ const Login = () => {
             // helperText={errors.email?.message}
             />
             <TextField
-              id="senha"
+              id="password"
               size="small"
               type="password"
               autoComplete="current-password"
-              {...register("senha")}
-              error={!!errors.senha}
-              label={errors?.senha?.message ? errors.senha?.message : "Senha"}
+              {...register("password")}
+              error={!!errors.password}
+              label={errors?.password?.message ? errors.password?.message : "Senha"}
             />
             <div className="btn-container">
               <Button value="Log In" padding="10px" color="#027da7" width="100px" height="40px" />

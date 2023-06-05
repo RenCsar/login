@@ -8,11 +8,11 @@ export type BtnTypes = {
 
 export type IUser = {
     email: string;
-    senha: string;
+    password: string;
 };
 
 export type TUser = {
-    id: string;
+    _id: string;
     email: string;
     name: string;
 };
@@ -21,4 +21,5 @@ export type TAuthState = {
     isAuthenticated: boolean;
     user: TUser | null;
     error: string | null;
+    token: string | null;
 };

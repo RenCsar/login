@@ -2,8 +2,13 @@ import * as Lottieplayer from "@lottiefiles/lottie-player";
 import "@lottiefiles/lottie-player";
 import { Container } from "./Home.Styled";
 import Header from "../../components/Header";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 const Home = () => {
+
+  const { token, user } = useSelector((state: RootState) => state.auth)
+
   return (
     <Container>
       <Header />

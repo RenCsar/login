@@ -6,8 +6,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import AccountMenu from '../MenuList';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -51,10 +51,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const test = () => {
-  console.log('teste')
-}
-
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -67,7 +63,6 @@ export default function Header() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
           </IconButton>
           <Typography
             variant="h6"
@@ -75,19 +70,24 @@ export default function Header() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            TH - Talents Hunter
+            TT - Tech Talents
           </Typography>
-          <Search
-            onKeyDown={(e: any) => e.keyCode == 13 ? console.log(e.target.value) : ""}
-          >
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          <Box>
+            <Search
+              onKeyDown={(e: any) => e.keyCode == 13 ? console.log(e.target.value) : ""}
+            >
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </Search>
+          </Box>
+          <Box sx={{ width: '100px', display: 'flex', justifyContent: 'flex-end' }}>
+            <AccountMenu />
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
