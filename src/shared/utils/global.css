@@ -8,7 +8,7 @@
 
 :root {
   --bg-login: #f3f3f3;
-  --bg-login-card: #fff;
+  --bg-login-card: rgb(255, 255, 255, .95);
   --bg-btn-login: #3f7de8;
   --roxo-claro: #ac7dfd;
   --roxo-escuro: #6666ff;

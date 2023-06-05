@@ -1,12 +1,25 @@
 import styled from "styled-components";
+import Work from '../../assets/work.webp'
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: var(--bg-login);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${Work});
+    background-size: cover;
+    filter: blur(4px);
+    z-index: -1;
+  }
 
   .login-card {
     display: flex;
