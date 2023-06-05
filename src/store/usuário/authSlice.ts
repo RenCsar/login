@@ -1,4 +1,4 @@
-import { createSlice, Dispatch, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, Dispatch, PayloadAction, ThunkDispatch } from '@reduxjs/toolkit';
 import { TAuthState, TUser } from '../../shared/types/types';
 import API from '../api/api';
 
@@ -36,7 +36,7 @@ const authSlice = createSlice({
             state.token = action.payload
             localStorage.setItem('token', action.payload)
         },
-        setLoading: (state, action)=>{
+        setLoading: (state, action: PayloadAction<boolean>)=>{
             state.loading = action.payload
         }
     },
@@ -46,7 +46,7 @@ export const { loginSuccess, loginFailure, logout, setToken, setLoading } = auth
 
 export const login =
     (email: string, password: string, redirectTo: (path: string) => void) =>
-        async (dispatch: any) => {
+        async (dispatch: ThunkDispatch<any, void, any>) => {
             try {
                 dispatch(setLoading(true))
                 const response = await API.post<{ user: TUser, token: string }>('/auth/user', { email, password });
@@ -62,7 +62,7 @@ export const login =
 
 export const register =
     (email: string, password: string) =>
-        async (dispatch: any) => {
+        async (dispatch: ThunkDispatch<any, void, any>) => {
             try {
                 const response = await API.post<TUser>('/auth/register', { email, password });
                 dispatch(loginSuccess(response.data));
