@@ -3,12 +3,11 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountMenu from '../MenuList';
 import Logo from './../../assets/tech-talent.png'
+import { Container } from './Header.style';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -54,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Container>
       <AppBar position="static" sx={{ background: '#027da7' }}>
         <Toolbar>
           <Box
@@ -65,6 +64,7 @@ export default function Header() {
               justifyContent: 'space-between',
               padding: '0px 10px'
             }}
+            className='content'
           >
             <Box sx={{display: 'flex'}}>
               <img src={Logo} style={{ width: '160px'}} />
@@ -73,7 +73,7 @@ export default function Header() {
               display: 'flex',
               gap: '30px',
             }}>
-              <Box sx={{ width: '400px' }}>
+              <Box className="search-container">
                 <Search
                   onKeyDown={(e: any) => e.keyCode == 13 ? console.log(e.target.value) : ""}
 
@@ -83,8 +83,8 @@ export default function Header() {
                   </SearchIconWrapper>
                   <StyledInputBase
                     placeholder="Search…"
-                    inputProps={{ 'aria-label': 'search' }}
-                    sx={{ width: '100%' }}
+                    inputProps={{ 'aria-label': 'search' }}                    
+                    className='search-input'
                   />
                 </Search>
               </Box>
@@ -95,6 +95,6 @@ export default function Header() {
           </Box>
         </Toolbar>
       </AppBar>
-    </Box>
+    </Container>
   );
 }

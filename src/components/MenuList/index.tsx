@@ -10,13 +10,18 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import SearchIcon from '@mui/icons-material/Search';
 import { RootState, store } from '../../store/store';
 import { useSelector } from "react-redux";
 import { handleLogout } from '../../store/usuário/authSlice';
 import { useNavigate } from 'react-router-dom';
 import Logo from "./../../assets/logo.png"
+import { useMediaQuery, useTheme } from '@mui/material';
 
 export default function AccountMenu() {
+
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'))
 
   const { user } = useSelector((state: RootState) => state.auth);
 
@@ -47,7 +52,7 @@ export default function AccountMenu() {
             aria-expanded={open ? 'true' : undefined}
           >
             <Avatar sx={{ width: 32, height: 32 }} src={Logo}>
-              {user? user?.name.split('')[0]: "M"}              
+              {user ? user?.name.split('')[0] : "M"}
             </Avatar>
           </IconButton>
         </Tooltip>
@@ -94,9 +99,20 @@ export default function AccountMenu() {
           </>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Avatar src={Logo}/> My account
+          <Avatar src={Logo} /> My account
         </MenuItem>
         <Divider />
+        <MenuItem
+          onClick={handleClose}
+          sx={{
+            display: matches ? 'none' : 'block',
+          }}
+        >
+          <ListItemIcon>
+            <SearchIcon fontSize="small" />
+          </ListItemIcon>
+          Search
+        </MenuItem>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
             <PersonAdd fontSize="small" />
