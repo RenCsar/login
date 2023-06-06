@@ -25,10 +25,6 @@ export const Container = styled.div`
     }
   }
 
-  &.welcome-container {
-    width: 200px;
-  }
-
   & .lottie-space {
     display: flex;
     width: 100%;
@@ -36,6 +32,32 @@ export const Container = styled.div`
 
     & .lottie-container {
       width: 460px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    & .welcome-container {
+      & .lottie-container {
+        width: 400px;
+      }
+    }
+
+    & .text-container {
+      padding: 0 30px;
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    & .welcome-container {
+      & .lottie-container {
+        width: 300px;
+      }
+    }
+
+    & .text-container {
+      padding: 0 5px;
+      font-size: 14px;
     }
   }
 `;
