@@ -67,10 +67,7 @@ export default function Header() {
             }}
           >
             <Box>
-              <img src={Logo} style={{ width: '160px' }} />
-            </Box>
-            <Box>
-              
+              <img src={Logo} style={{ width: '160px', marginTop: '2px' }} />
             </Box>
             <Box sx={{
               display: 'flex',

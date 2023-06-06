@@ -5,8 +5,9 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 
   &::before {
     content: "";
@@ -19,6 +20,13 @@ export const Container = styled.div`
     background-size: cover;
     filter: blur(5px);
     z-index: -1;
+  }
+
+  .logo {
+    margin: 20px 0 15px 0;
+    & img {
+      width: 300px;
+    }
   }
 
   .login-card {

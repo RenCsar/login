@@ -13,6 +13,7 @@ import CircularIndeterminate from "../../components/Loader";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import CustomizedSnackbars from "../../components/ErrorSnackBar";
+import Logo from './../../assets/tech-talent-blue.png'
 
 const Login = () => {
   const { loading, error } = useSelector((state: RootState) => state.auth);
@@ -42,6 +43,9 @@ const Login = () => {
       {loading ?
         <CircularIndeterminate /> :
         <>
+          <div className="logo">
+            <img src={Logo} alt="Logo"/>
+          </div>
           <div className="login-card">
             <div className="lottie-container">
               <div className="img-container">
