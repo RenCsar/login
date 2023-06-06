@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountMenu from '../MenuList';
+import Logo from './../../assets/tech-talent.png'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -56,37 +57,44 @@ export default function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ background: '#027da7' }}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
+          <Box
+            sx={{
+              display: 'flex',
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '0px 10px'
+            }}
           >
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            TT - Tech Talents
-          </Typography>
-          <Box>
-            <Search
-              onKeyDown={(e: any) => e.keyCode == 13 ? console.log(e.target.value) : ""}
-            >
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </Search>
-          </Box>
-          <Box sx={{ width: '100px', display: 'flex', justifyContent: 'flex-end' }}>
-            <AccountMenu />
+            <Box>
+              <img src={Logo} style={{ width: '160px' }} />
+            </Box>
+            <Box>
+              
+            </Box>
+            <Box sx={{
+              display: 'flex',
+              gap: '30px',
+            }}>
+              <Box sx={{ width: '400px' }}>
+                <Search
+                  onKeyDown={(e: any) => e.keyCode == 13 ? console.log(e.target.value) : ""}
+
+                >
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    placeholder="Search…"
+                    inputProps={{ 'aria-label': 'search' }}
+                    sx={{ width: '100%' }}
+                  />
+                </Search>
+              </Box>
+              <Box>
+                <AccountMenu />
+              </Box>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>

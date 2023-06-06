@@ -22,7 +22,6 @@ const Login = () => {
 
   useEffect(() => {
     if (token) navigate('/home')
-    console.log(error)
   }, [])
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IUser>({
