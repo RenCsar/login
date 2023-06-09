@@ -18,8 +18,6 @@
 <h1 align="center">  
   <p align="center">
   <img width="800" height="400" src="public/login.gif"><br><br>
-  <img width="200" height="400" src="public/mobile.gif"><br><br>
-  <img width="800" height="400" src="public/toast-erro.gif">
 </p>
 
 </h1>
