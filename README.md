@@ -29,7 +29,7 @@ Este é um pequeno projeto desenvolvido com a Stack MERN (React.js, TypeScript, 
 
 A aplicação possui validação para rotas privadas, permitindo o acesso somente à página inicial (home) se um token válido estiver presente. Da mesma forma, se um usuário já estiver logado e tentar acessar a página de login, só será redirecionado para a página de login se realizar o processo de logout e invalidar o token.
 
-O formulário de login foi desenvolvido utilizando o React Hook Form para gerenciamento de estado e validação. As validações de e-mail e senha são realizadas com o auxílio da biblioteca Yup, garantindo a correta formatação dos campos. Para exibir mensagens de erro, utiliza-se o componente Toasty do Material UI. Essas validações disparam alertas quando campos obrigatórios, como e-mail ou senha, não são preenchidos. Além disso, são capazes de exibir mensagens de erro vindas do back-end, como quando o usuário não existe, a senha está incorreta ou ocorre um erro no servidor, por exemplo.
+O formulário de login foi desenvolvido utilizando o React Hook Form para gerenciamento de estado e validação. As validações de e-mail e senha são realizadas com o auxílio da biblioteca Yup, garantindo a correta formatação dos campos e disparando alertas quando campos obrigatórios, como e-mail ou senha, não são preenchidos. Para exibir mensagens de erro, utiliza-se o componente Toasty do Material UI. Além disso, o sistema é capaz de exibir mensagens de erro vindas do back-end, como quando o usuário não existe, a senha está incorreta ou ocorre um erro no servidor, por exemplo.
 
 Este repositório contém o front-end da aplicação. O back-end pode ser encontrado [Aqui](https://github.com/RenCsar/API-login)!
 
