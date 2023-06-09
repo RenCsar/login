@@ -25,7 +25,13 @@
 <a id="Descrição"></a>
 ### Descrição
 
-Este é um projeto desenvolvido utilizando as tecnologias React, TypeScript, Node.js, Express e MongoDB (conhecido como projeto MERN). O objetivo principal é implementar um sistema de login seguro, onde os usuários podem autenticar-se através de tokens gerados pelo JSON Web Tokens (JWT).
+Este é um pequeno projeto desenvolvido com a Stack MERN (React.js, TypeScript, Node.js, Express e MongoDB). O objetivo principal é implementar um sistema de login seguro, onde os usuários podem autenticar-se através de tokens gerados pelo JSON Web Tokens (JWT).
+
+A aplicação possui validação para rotas privadas, permitindo o acesso somente à página inicial (home) se um token válido estiver presente. Da mesma forma, se um usuário já estiver logado e tentar acessar a página de login, só será redirecionado para a página de login se realizar o processo de logout e invalidar o token.
+
+O formulário de login foi desenvolvido utilizando o React Hook Form para gerenciamento de estado e validação. As validações de e-mail e senha são realizadas com o auxílio da biblioteca Yup, garantindo a correta formatação dos campos. Para exibir mensagens de erro, utiliza-se o componente Toasty do Material UI. Essas validações disparam alertas quando campos obrigatórios, como e-mail ou senha, não são preenchidos. Além disso, são capazes de exibir mensagens de erro vindas do back-end, como quando o usuário não existe, a senha está incorreta ou ocorre um erro no servidor, por exemplo.
+
+Este repositório contém o front-end da aplicação. O back-end pode ser encontrado [Aqui](https://github.com/RenCsar/API-login)!
 
 <a id="Tecnologias"></a>
 ### Tecnologias utilizadas
