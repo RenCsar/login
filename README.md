@@ -1,22 +1,19 @@
-
 <h1 align="center">
- <img align="center" width="150" height="150" src="https://i.imgur.com/ngHfRyV.png"><br>
- Tech Shopping</a>
+ <img align="center" width="150" height="150" src="public/favicon.png"><br>
+ Tech Talents</a>
 </h1>
-
-<p align="center">Todos os seus gadgets favoritos em um só lugar.</p>
-<p align="center">Acesse o site da <a href="https://tech-shopping.vercel.app/">Tech Shopping</a>.</p>
 
 <p align="center">
  <a href="#Descrição">Descrição</a> •
- <a href="#Tecnologias">Tecnologias utilizadas</a> •
+ <a href="#Tecnologias">Tech Talents</a> •
+ <a href="#instalacao">Instalação e Uso</a> •
+ <a href="#estrutura">Estrutura do Projeto</a> •
  <a href="#autor">Autor</a>
 </p>
 
 ---
 
 <br>
-
 
 <h1 align="center">  
   <p align="center">
@@ -41,44 +38,28 @@ Sobre as tecnologias utilizadas: as rotas da aplicação foram feitas com o **Re
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- React JS
-- Typescript
-- Redux toolkit
-- Redux Thunk
-- Axios
-- Styled Components
-- Material UI
-- Toastify
-- React Router Dom
+- [React JS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/)
+- [Styled Components](https://styled-components.com/)
+- [Redux toolkit](https://redux-toolkit.js.org/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [Material UI](https://mui.com/material-ui/getting-started/overview/)
 
 ---
 
-### Autor
-
-Made with 💜 by Renan Cesar 👋
-
-[![LinkedIn Badge](https://img.shields.io/badge/-Renan_Cesar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/renan-cesar/)](https://www.linkedin.com/in/renan-cesar/)
-
-
-
-------------------------------------------------------------------------------------------------------------------
-
-
-# Nome do Projeto
-
-Breve descrição do projeto
-
+<a id="instalacao"></a>
 ## Pré-requisitos
 
-- Node.js (versão X.X.X)
-- npm (versão X.X.X)
+- Node.js (versão ^18.16)
+- npm (versão ^8.12.2)
 
 ## Configuração do Ambiente
 
 1. Clone o repositório:
 
    ```shell
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
+   git clone https://github.com/RenCsar/login.git
    ```
 
 2. Instale as dependências:
@@ -97,6 +78,7 @@ Breve descrição do projeto
 
    O servidor será iniciado em http://localhost:3000.
 
+<a id="estrutura"></a>
 ## Estrutura do Projeto
 
 Explicação da estrutura de pastas do projeto:
@@ -112,25 +94,8 @@ src/
   index.tsx         # Ponto de entrada da aplicação
 ```
 
-## Principais Tecnologias Utilizadas
+### Autor
 
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [React Router](https://reactrouter.com/)
-- [Styled Components](https://styled-components.com/)
+Made with 💜 by Renan Cesar 👋
 
-## Contribuindo
-
-Contribuições são bem-vindas! Para contribuir com o projeto, siga as etapas abaixo:
-
-1. Faça um fork do repositório
-2. Crie uma nova branch com sua feature (`git checkout -b minha-feature`)
-3. Faça o commit das suas alterações (`git commit -am 'Adicionando nova feature'`)
-4. Faça o push para a branch (`git push origin minha-feature`)
-5. Abra um Pull Request
-
-## Licença
-
-[MIT](LICENSE)
-```
-```
+[![LinkedIn Badge](https://img.shields.io/badge/-Renan_Cesar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/renan-cesar/)](https://www.linkedin.com/in/renan-cesar/)
