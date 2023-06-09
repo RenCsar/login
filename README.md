@@ -39,6 +39,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Redux toolkit](https://redux-toolkit.js.org/)
 - [Axios](https://axios-http.com/ptbr/docs/intro)
 - [Material UI](https://mui.com/material-ui/getting-started/overview/)
+- [React Hook Form](https://www.react-hook-form.com/)
+- [Yup](https://github.com/jquense/yup)
 
 ---
 
