@@ -17,7 +17,7 @@
 
 <h1 align="center">  
   <p align="center">
-  <img width="800" height="400" src="public/login.gif"><br><br>
+  <img width="800" height="300" src="public/login.gif"><br><br>
 </p>
 
 </h1>
